@@ -1,7 +1,6 @@
 # coding: utf-8
 import requests
 import json
-import time
 import secrets
 
 def login():
@@ -30,5 +29,5 @@ def apply(token):
 
 if __name__ == '__main__':
     token = login()
-    print(changeLed(token, "green", "pulse"))
+    print(changeLed(token, "green", "on"))
     print(apply(token))
