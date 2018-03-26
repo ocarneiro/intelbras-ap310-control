@@ -9,11 +9,16 @@ if __name__ == "__main__":
     verde = Button(3)
     while True:
         if vermelho.is_pressed and verde.is_pressed:
-            ap310.changeLed(token, "yellow", "blink")
+            print('Ambos')
+            r = ap310.changeLed(token, "yellow", "blink")
+            ap310.apply(token)
             time.sleep(5)
         elif vermelho.is_pressed:
-            ap310.changeLed(token, "red", "pulse")
+            print('Vermelho')
+            r = ap310.changeLed(token, "red", "pulse")
+            ap310.apply(token)
             time.sleep(3)
         elif verde.is_pressed:
-            ap310.changeLed(token, "green", "on")
-        time.sleep(1)
+            print('Verde')
+            r = ap310.changeLed(token, "green", "on")
+            ap310.apply(token)
